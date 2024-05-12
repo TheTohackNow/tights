@@ -1,0 +1,257 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Manrope", sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 85%;
+}
+
+header>.container{
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+}
+
+
+
+nav{
+    display: flex;
+    gap: 20px;
+}
+.menu>*{
+    color: black;
+}
+
+nav>input{
+    border-radius: 25px;
+    border: 1px grey solid;
+    padding:5px 10px;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+.title_img{
+    padding-top: 10%;
+}
+
+.image_{
+    width: 300px;
+    height: 429px;
+    display: block;
+    margin: auto;
+    position: relative;
+    border-radius: 4px;
+    background-image: url(../image/model.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 0;
+    text-align: center;
+}
+
+.image_> h1{
+    padding-top: 40%;   
+}
+
+.image_::after{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    background-color: black;
+    content:"";
+    opacity: 0.5;
+    z-index: 1;
+}
+.image_>h1{
+    position: relative;
+    z-index: 99;
+}
+.image_>*{
+    color:aliceblue;
+    
+}
+main>.container{
+    width: 75%;
+    background-color: #DDDADA;
+    margin: auto;
+    padding-bottom: 100px;
+}
+.aboutUs{
+    padding:50px 0px ;
+    background-color: #cfdce6;
+}
+
+.aboutUs>.container{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.aboutUs span{
+    width: 218px;
+}
+
+article{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+.followUs{
+    background-color: rgb(27, 27, 27);
+    padding: 100px 0px;
+}
+.followUs>.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer *{
+    color: #DDDADA;
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+.followUs h2{
+    color: #DDDADA;
+    width: 210px;
+}
+
+.followUs *{
+    color: #DDDADA;
+    text-align: center;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(24, 19, 19);
+}
+
+
+.social{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+#map {
+    height: 600px;
+    border: 4px solid rgb(184, 77, 77);
+}
+
+/*burger menu----------------------------------------*/
+
+.menu_item {
+    margin-right: 1em;
+    display: flex;
+}
+
+
+
+.menu-small {
+    display: none;
+    height: 2em;
+}
+
+.menu_small_item {
+    display: none;
+}
+
+.stick {
+    width: 80%;
+    height: 5px;
+    background: black;
+}
+
+.inner {
+    padding: 1em 0 0 0;
+    width: 60%;
+    height: auto;
+}
+
+@media (max-width: 860px) {
+    .menu {
+        display: none;
+    }
+    footer>nav{
+        display: none;
+    }
+    
+    .menu-small {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        position: absolute;
+        background: white;
+        transform: translateX(-100%);
+        z-index: 2;
+        top: 0;
+    }
+    .menu-small>*{
+        margin-top: 20%;
+        font-size: larger;
+        text-decoration: none;
+        color: black;
+    }
+
+    .menu_small_item {
+        height: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu_small_item:first-child {
+        padding-top: calc(50px + 2em);
+    }
+
+    .menu_small_icon {
+        position: absolute;
+        top: 1em;
+        left: 1em;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        z-index: 3;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .inner {
+        padding-top: calc(50px + 2em);
+    }
+
+    .inner p {
+        margin: 0
+    }
+    .aboutUs>.container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .aboutUs article{
+        justify-content: flex-start;
+    }
+    .followUs{
+        flex-direction: column;
+    }
+}
